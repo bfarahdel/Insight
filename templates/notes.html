@@ -10,6 +10,7 @@
                 background-image: url(https://globalcolliance.com/wp-content/uploads/2021/01/Country-Banner-BG-1.gif);
                 background-position: center;
             }
+
             .submit_button {
                 margin-left: 10px; 
                 margin-right: 10px;
@@ -30,11 +31,13 @@
     </head>
 
     <body>
-        <h1 style="font-family: 'Signika Negative', sans-serif;">Audio File Upload</h1>
+        <div class="file_container">
+        <h1 style="font-family: 'Signika Negative', sans-serif; background-color: white;">Audio File Upload</h1>
         <form method="POST" enctype=multipart/form-data>
-            <input class="file" type="file" name="file"><br>
+            <input class="file" type="file" name="file" style="background-color: white;"><br>
             <input class="submit_button" type="submit" name="audio_submit" value="Submit">
         </form>
+        </div>
 
         <h1 style="font-family: 'Signika Negative', sans-serif;">Notes</h1>
         <textarea rows="40" cols="120">
