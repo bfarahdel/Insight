@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    padding-bottom: 40px;
+}
+
+.file {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+textarea {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
