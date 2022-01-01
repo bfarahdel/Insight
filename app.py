@@ -26,6 +26,19 @@ def main():
         msg="\n".join(msg),
     )
 
+@app.route("/models", methods=["POST","GET"])
+def echo_models():
+    echo_medical_key = os.getenv("echo_medical")
+    echo_geo_key= os.getenv("echo_geo")
+
+    echo_medical = f"https://api.echo3D.co/webar?key={echo_medical_key}"
+    echo_geo = f"https://api.echo3D.co/webar?key={echo_geo_key}"
+
+    return flask.render_template(
+        "ar_models.html",
+        echo_medical=echo_medical,
+        echo_geo=echo_geo,
+    )
 
 if __name__ == "__main__":
     app.run(
