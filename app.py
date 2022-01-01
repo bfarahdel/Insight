@@ -1,11 +1,13 @@
 import os
 from dotenv import find_dotenv, load_dotenv
 import flask
-from flask import request, redirect, flash
+from flask import request
 from symbl_api import symbl_api
+from flask_ckeditor import CKEditor
 
 app = flask.Flask(__name__)
 app.secret_key = os.getenv("flask_secret")
+ckeditor = CKEditor(app)
 
 load_dotenv(find_dotenv())
 
@@ -21,7 +23,7 @@ def main():
 
     return flask.render_template(
         "notes.html",
-        msg=msg,
+        msg="\n".join(msg),
     )
 
 
