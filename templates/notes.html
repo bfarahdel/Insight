@@ -3,17 +3,41 @@
     <head>
         <title>Notes</title>
         <link href="/static/notes.css" rel="stylesheet">
+        <style>
+            body {
+                background: repeat-y;
+                background-color: white;
+                background-image: url(https://globalcolliance.com/wp-content/uploads/2021/01/Country-Banner-BG-1.gif);
+                background-position: center;
+            }
+            .submit_button {
+                margin-left: 10px; 
+                margin-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 25px;
+                border-color: #01579b; 
+                background-color: #01579b;
+                color: white; 
+                font-size: 12pt;
+                font-weight: 500;
+                font-family: 'Karla', sans-serif;
+                cursor: pointer;
+            }
+        </style>
     </head>
 
     <body>
-        <h1>Audio File Upload</h1>
+        <h1 style="font-family: 'Signika Negative', sans-serif;">Audio File Upload</h1>
         <form method="POST" enctype=multipart/form-data>
-            <input class="file" type="file" name="file"><br><br>
-            <input type="submit" name="audio_submit" value="Submit">
+            <input class="file" type="file" name="file"><br>
+            <input class="submit_button" type="submit" name="audio_submit" value="Submit">
         </form>
-        
-        <h1>Notes</h1>
-        <textarea rows="50" cols="120">
+
+        <h1 style="font-family: 'Signika Negative', sans-serif;">Notes</h1>
+        <textarea rows="40" cols="120">
             {% if msg %}
                 {% for m in msg %}
                     {{m}}

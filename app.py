@@ -5,6 +5,7 @@ from flask import request, redirect, flash
 from symbl_api import symbl_api
 
 app = flask.Flask(__name__)
+app.secret_key = os.getenv("flask_secret")
 
 load_dotenv(find_dotenv())
 
@@ -14,7 +15,6 @@ def main():
     if request.method=="POST":
         f = request.files['file']
         f.save(f.filename)
-        print("File saved, getting message...")
         msg = symbl_api().audio_text(path=f.filename)
         f.close()
         os.remove(f.filename)
