@@ -13,6 +13,13 @@ load_dotenv(find_dotenv())
 
 @app.route("/", methods=["POST", "GET"])
 def main():
+
+    return flask.render_template(
+        "index.html",
+    )
+
+@app.route("/notes", methods=["POST", "GET"])
+def notes_page():
     msg = []
     if request.method=="POST":
         f = request.files['file']
