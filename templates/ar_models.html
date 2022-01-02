@@ -25,7 +25,7 @@
         <div class="ar_container">
         {% for i in range(0,ent_len) %}
             <figure style="width: 100%;">
-                <img src={{echo_med_img[i]}}>
+                <img src={{echo_med_img[i]}} height="60%" width="65%">
                 <figcaption style="font-size: 28pt; font-family: 'Yanone Kaffeesatz', sans-serif; color: white;">
                     <a target="_blank" rel="noopener noreferrer" href="{{echo_medical}}&entry={{med_entry[i]}}" 
                     style="color: white;">
@@ -40,8 +40,8 @@
         <h1>Geographical Landmarks</h1>
         <div class="ar_container">
         {% for j in range(0,ent_len) %}
-            <figure style="width: 80%;">
-                <img src={{echo_geo_img[j]}}>
+            <figure style="width: 100%;">
+                <img src={{echo_geo_img[j]}} height="70%" width="75%">
                 <figcaption style="font-size: 28pt; font-family: 'Yanone Kaffeesatz', sans-serif;">
                     <a target="_blank" rel="noopener noreferrer" href="{{echo_geo}}&entry={{geo_entry[j]}}" 
                     style="color: white;">

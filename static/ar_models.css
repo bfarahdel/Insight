@@ -53,9 +53,8 @@ h1 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 img {
-    width: 75%;
-    height: 30vh;
     padding: 5px;
+    border-radius: 10px;
 }
 
 .ar_container {
