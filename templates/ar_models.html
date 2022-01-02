@@ -25,12 +25,12 @@
         <div class="ar_container">
         {% for i in range(0,ent_len) %}
             <figure style="width: 100%;">
-                <iframe
-                src="{{echo_medical}}&entry={{med_entry[i]}}"
-                title="echo3D WebAR Medical Visualization">
-                </iframe>
-                <figcaption style="text-align: center; font-size: 28pt; font-family: 'Yanone Kaffeesatz', sans-serif; color: white;">
-                    {{med_name[i]}}
+                <img src={{echo_med_img[i]}}>
+                <figcaption style="font-size: 28pt; font-family: 'Yanone Kaffeesatz', sans-serif; color: white;">
+                    <a target="_blank" rel="noopener noreferrer" href="{{echo_medical}}&entry={{med_entry[i]}}" 
+                    style="color: white;">
+                        {{med_name[i]}}
+                    </a>
                 </figcaption>
             </figure>
         {% endfor %}
@@ -40,13 +40,13 @@
         <h1>Geographical Landmarks</h1>
         <div class="ar_container">
         {% for j in range(0,ent_len) %}
-            <figure style="width: 100%;">
-                <iframe
-                src="{{echo_geo}}&entry={{geo_entry[j]}}"
-                title="echo3D WebAR Geographical Visualization">
-                </iframe>
-                <figcaption style="text-align: center; font-size: 28pt; font-family: 'Yanone Kaffeesatz', sans-serif; color: white;">
-                    {{geo_name[j]}}
+            <figure style="width: 80%;">
+                <img src={{echo_geo_img[j]}}>
+                <figcaption style="font-size: 28pt; font-family: 'Yanone Kaffeesatz', sans-serif;">
+                    <a target="_blank" rel="noopener noreferrer" href="{{echo_geo}}&entry={{geo_entry[j]}}" 
+                    style="color: white;">
+                      {{geo_name[j]}}
+                    </a>
                 </figcaption>
             </figure>
         {% endfor %}

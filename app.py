@@ -41,15 +41,29 @@ def echo_models():
     echo_medical = f"https://api.echo3D.co/webar?key={echo_medical_key}"
     echo_geo = f"https://api.echo3D.co/webar?key={echo_geo_key}"
 
+    echo_med_img=[
+        "https://dl.dropboxusercontent.com/s/9tupiaa9nczexb6/Heart.png?dl=0",
+        "https://dl.dropboxusercontent.com/s/jk7gt3fs4d2cw2y/Lungs.png?dl=0",
+        "https://dl.dropboxusercontent.com/s/0zt1c7rlvq77x7i/HIV.png?dl=0",
+    ]
+
+    echo_geo_img=[
+        "https://dl.dropboxusercontent.com/s/mlfh3ojl4oo94dh/Everest.png?dl=0",
+        "https://dl.dropboxusercontent.com/s/zdpdvlbhxqyqpzy/Buckingham.png?dl=0",
+        "https://dl.dropboxusercontent.com/s/q17edkaw0ivqm1w/Great_Wall.png?dl=0",
+    ]
+
     return flask.render_template(
         "ar_models.html",
         ent_len=3,
         echo_medical=echo_medical,
         med_entry=["d3e5b67c-061f-4977-9b3a-8d4027f80905", "6f276bf7-d203-4676-8813-df72f680ae8c", "1861a637-1e6e-43af-b7fd-2e87a67bb225"],
         med_name=["Heart", "Lungs (Exhale)", "Human Immunodeficiency Virus (HIV)"],
+        echo_med_img=echo_med_img,
         echo_geo=echo_geo,
-        geo_entry=["2c34c3ae-d390-4b7a-af82-706eb2e6103d", "4e2552af-6c7d-4670-bbbc-617b823b855b", "247a7845-f12b-4a75-9879-370af28f4aa1"],
-        geo_name=["US Capitol","Buckingham Palace", "Great Wall of China"],
+        geo_entry=["147f240c-cd1c-4578-b6d4-c84309285d1e", "4e2552af-6c7d-4670-bbbc-617b823b855b", "247a7845-f12b-4a75-9879-370af28f4aa1"],
+        geo_name=["Mount Everest","Buckingham Palace", "Great Wall of China"],
+        echo_geo_img=echo_geo_img,
     )
 
 if __name__ == "__main__":
