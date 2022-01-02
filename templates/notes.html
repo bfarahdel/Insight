@@ -11,6 +11,38 @@
                 background-position: center;
             }
 
+            .navbar {
+            margin-left: auto;
+            margin-right: auto;
+            list-style-type: none;
+            }
+
+            .navbar_list {
+            list-style-type: none;
+            padding-left: 0px;
+            }
+
+            .navbar a {
+            float: left;
+            width: 10em;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px 5px;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+            }
+
+            .navbar a:hover {
+            background-color: grey;
+            color: #0d47a1;
+            }
+
+            .navbar a.active {
+            background-color: #01579b;
+            color: white;
+            }
+
             .submit_button {
                 margin-left: 10px; 
                 margin-right: 10px;
@@ -28,18 +60,31 @@
                 cursor: pointer;
             }
         </style>
+            <nav class="navbar">
+                <ul style="display: flex; justify-content: center; align-items: center; list-style-type: none;">
+                    <li class="navbar_list">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="navbar_list">
+                        <a class="active" href="/notes">Notes</a>
+                    </li>
+                    <li class="navbar_list">
+                        <a href="/models">3D Models</a>
+                    </li class="navbar_list">
+                </ul>
+            </nav>
     </head>
 
     <body>
         <div class="file_container">
-        <h1 style="font-family: 'Signika Negative', sans-serif; background-color: white;">Audio File Upload</h1>
+        <h1 style="font-family: 'Signika Negative', sans-serif; color: #e64a19;">Audio File Upload</h1>
         <form method="POST" enctype=multipart/form-data>
             <input class="file" type="file" name="file" style="background-color: white;"><br>
             <input class="submit_button" type="submit" name="audio_submit" value="Submit">
         </form>
         </div>
 
-        <h1 style="font-family: 'Signika Negative', sans-serif;">Notes</h1>
+        <h1 style="font-family: 'Signika Negative', sans-serif; color: #e64a19;">Notes</h1>
         {{ ckeditor.load() }}
         <form method="post" style="margin-left: auto; margin-right: auto; width: 700px; height: 500px;">
             {{ ckeditor.create(value=msg) }}

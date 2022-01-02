@@ -8,8 +8,40 @@
     height: 100%;
     background-color: black;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-     url(https://lh3.googleusercontent.com/proxy/LJiWBN_goB2mOf3aSomofSe_DijCRU6GeUJJgO4nZ9B4h3t_HMomBprXZBXEUJ7uOtilnerVHaPj5_sCfRrI8Z6-uP8jHrIkwyVMBflhNpNpQQQ);
+     url('http://artfcity.com/wp-content/uploads/2014/09/dots-new.gif');
     z-index: -1;
+}
+
+.navbar {
+margin-left: auto;
+margin-right: auto;
+list-style-type: none;
+}
+
+.navbar_list {
+list-style-type: none;
+padding-left: 0px;
+}
+
+.navbar a {
+float: left;
+width: 10em;
+color: white;
+text-align: center;
+text-decoration: none;
+padding: 14px 5px;
+font-size: 16px;
+font-family: "Poppins", sans-serif;
+}
+
+.navbar a:hover {
+background-color: grey;
+color: #0d47a1;
+}
+
+.navbar a.active {
+background-color: #01579b;
+color: white;
 }
 
 h1 {
