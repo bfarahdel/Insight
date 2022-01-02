@@ -1,5 +1,5 @@
 Flask
-flask_ckeditor
+Flask-CKEditor
 python-dotenv
 requests
 symbl
