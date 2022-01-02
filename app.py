@@ -38,9 +38,11 @@ def notes_page():
 def echo_models():
     echo_medical_key = os.getenv("echo_medical")
     echo_geo_key= os.getenv("echo_geo")
+    echo_am_key= os.getenv("echo_am")
 
     echo_medical = f"https://api.echo3D.co/webar?key={echo_medical_key}"
     echo_geo = f"https://api.echo3D.co/webar?key={echo_geo_key}"
+    echo_am = f"https://api.echo3D.co/webar?key={echo_am_key}"
 
     echo_med_img=[
         "https://dl.dropboxusercontent.com/s/9tupiaa9nczexb6/Heart.png?dl=0",
@@ -54,6 +56,12 @@ def echo_models():
         "https://dl.dropboxusercontent.com/s/q17edkaw0ivqm1w/Great_Wall.png?dl=0",
     ]
 
+    echo_am_img=[
+        "https://dl.dropboxusercontent.com/s/gyy0zx4iu53yq6k/Arctic_Fox.png?dl=0",
+        "https://dl.dropboxusercontent.com/s/5vjl865xx7bckw9/Goat.png?dl=0",
+        "https://dl.dropboxusercontent.com/s/o34gxxldaxjqvkm/Ferret.png?dl=0",
+    ]
+
     return flask.render_template(
         "ar_models.html",
         ent_len=3,
@@ -65,6 +73,10 @@ def echo_models():
         geo_entry=["147f240c-cd1c-4578-b6d4-c84309285d1e", "4e2552af-6c7d-4670-bbbc-617b823b855b", "247a7845-f12b-4a75-9879-370af28f4aa1"],
         geo_name=["Mount Everest","Buckingham Palace", "Great Wall of China"],
         echo_geo_img=echo_geo_img,
+        echo_am=echo_am,
+        am_entry=["9d434bf3-e0a7-4d1d-8ded-3150e41c52a1", "0990d8df-2cef-46f3-bafc-98c26988a941", "01ea25ef-38d9-45bc-96ff-f35318bf90c9"],
+        am_name=["Arctic Fox", "Goat", "Ferret"],
+        echo_am_img=echo_am_img,
     )
 
 if __name__ == "__main__":
