@@ -22,16 +22,34 @@
     <body>
         <div id="background"></div>
         <h1>Medical Visualization</h1>
-        <iframe
-           src={{echo_medical}}
-           title="echo3D WebAR Medical Visualization">
-        </iframe>
+        <div class="ar_container">
+        {% for i in range(0,ent_len) %}
+            <figure style="width: 100%;">
+                <iframe
+                src="{{echo_medical}}&entry={{med_entry[i]}}"
+                title="echo3D WebAR Medical Visualization">
+                </iframe>
+                <figcaption style="text-align: center; font-size: 28pt; font-family: 'Yanone Kaffeesatz', sans-serif; color: white;">
+                    {{med_name[i]}}
+                </figcaption>
+            </figure>
+        {% endfor %}
+        </div>
 
         <div id="background"></div>
         <h1>Geographical Landmarks</h1>
-        <iframe
-           src={{echo_geo}}
-           title="echo3D WebAR Geographical Visualization">
-        </iframe>
+        <div class="ar_container">
+        {% for j in range(0,ent_len) %}
+            <figure style="width: 100%;">
+                <iframe
+                src="{{echo_geo}}&entry={{geo_entry[j]}}"
+                title="echo3D WebAR Geographical Visualization">
+                </iframe>
+                <figcaption style="text-align: center; font-size: 28pt; font-family: 'Yanone Kaffeesatz', sans-serif; color: white;">
+                    {{geo_name[j]}}
+                </figcaption>
+            </figure>
+        {% endfor %}
+        </div>
     </body>
 </html>
