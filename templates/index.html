@@ -3,21 +3,102 @@
     <head>
         <link href="/static/index.css" rel="stylesheet">
         <title>Study AI</title>
+
+        <nav class="navbar">
+          <ul style="display: flex; justify-content: center; align-items: center; list-style-type: none;">
+              <li class="navbar_list">
+                  <a class="active" href="/">Home</a>
+              </li>
+              <li class="navbar_list">
+                  <a href="/notes">Notes</a>
+              </li>
+              <li class="navbar_list">
+                  <a href="/models">3D Models</a>
+              </li class="navbar_list">
+          </ul>
+        </nav>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+            body { 
+            background-color: white;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('https://globalcolliance.com/wp-content/uploads/2021/01/Country-Banner-BG-1.gif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            }
+
+            .navbar {
+            margin-left: auto;
+            margin-right: auto;
+            list-style-type: none;
+            }
+
+            .navbar_list {
+            list-style-type: none;
+            padding-left: 0px;
+            }
+
+            .navbar a {
+            float: left;
+            width: 10em;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px 5px;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+            }
+
+            .navbar a:hover {
+            background-color: grey;
+            color: #0d47a1;
+            }
+
+            .navbar a.active {
+            background-color: #01579b;
+            color: white;
+            }
+
+            h1 {
+            text-align: center;
+            }
+
+            p {
+            font-family: 'Inconsolata', monospace;
+            font-size: 14pt;
+            }
+
+            .welcome {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            border: solid;
+            border-radius: 10px;
+            padding: 60px;
+            background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40));
+            }
+        </style>
     </head>
 
     <body>
-        <nav class="navbar">
-            <ul style="display: flex; justify-content: center; align-items: center; list-style-type: none;">
-                <li class="navbar_list">
-                    <a class="active" href="/">Home</a>
-                </li>
-                <li class="navbar_list">
-                    <a href="/notes">Notes</a>
-                </li>
-                <li class="navbar_list">
-                    <a href="/models">3D Models</a>
-                </li class="navbar_list">
-            </ul>
-        </nav>
+      <h1 style="font-family: 'Play', sans-serif; font-size:32pt;">Study AI</h1>
+
+      <div class="welcome">
+      <h2 style="font-family: 'Quicksand', sans-serif; font-size:28pt;">About</h2>
+      <p>
+        Harness artifical intelligence to get notes from an audio file in the Notes tab and view 3D augmented reality medical visualization
+        and geographical landmark models in the 3D Models tab.
+      </p>
+      </div>
+
     </body>
 </html>

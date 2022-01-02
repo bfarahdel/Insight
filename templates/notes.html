@@ -5,9 +5,10 @@
         <link href="/static/notes.css" rel="stylesheet">
         <style>
             body {
-                background: no-repeat;
+                background: cover;
                 background-color: white;
-                background-image: url(https://globalcolliance.com/wp-content/uploads/2021/01/Country-Banner-BG-1.gif);
+                background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)),
+                url('https://i.gifer.com/YY7j.gif');
                 background-position: center;
             }
 
@@ -77,14 +78,14 @@
 
     <body>
         <div class="file_container">
-        <h1 style="font-family: 'Signika Negative', sans-serif; color: #e64a19;">Audio File Upload</h1>
+        <h1 style="font-family: 'Signika Negative', sans-serif; color: #f4511e;">Audio File Upload</h1>
         <form method="POST" enctype=multipart/form-data>
             <input class="file" type="file" name="file" style="background-color: white;"><br>
             <input class="submit_button" type="submit" name="audio_submit" value="Submit">
         </form>
         </div>
 
-        <h1 style="font-family: 'Signika Negative', sans-serif; color: #e64a19;">Notes</h1>
+        <h1 style="font-family: 'Signika Negative', sans-serif; color: #f4511e; padding-top: 10px;">Notes</h1>
         {{ ckeditor.load() }}
         <form method="post" style="margin-left: auto; margin-right: auto; width: 700px; height: 500px;">
             {{ ckeditor.create(value=msg) }}
