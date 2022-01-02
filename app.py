@@ -22,7 +22,13 @@ def notes_page():
     print(flask.Response())
     msg = []
     if request.method=="POST":
+        if 'file' not in request.files:
+            return flask.redirect("/notes")
+
         f = request.files['file']
+        if f.filename == '':
+            return flask.redirect("/notes")
+
         f.save(f.filename)
         msg = symbl_api().audio_text(path=f.filename)
         f.close()
