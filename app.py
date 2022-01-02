@@ -13,7 +13,6 @@ load_dotenv(find_dotenv())
 
 @app.route("/", methods=["POST", "GET"])
 def main():
-
     return flask.render_template(
         "index.html",
     )
