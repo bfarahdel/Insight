@@ -20,6 +20,7 @@ def main():
 
 @app.route("/notes", methods=["POST", "GET"])
 def notes_page():
+    print(flask.Response())
     msg = []
     if request.method=="POST":
         f = request.files['file']

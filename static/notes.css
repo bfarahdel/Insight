@@ -19,6 +19,22 @@ form {
     width: 10%;
 }
 
+.loader {
+    margin-left: auto;
+    margin-right: auto;
+    border: 16px solid #37474f;
+    border-top: 16px solid #01579b;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+
 .file {
     margin-right: auto;
     margin-left: auto;

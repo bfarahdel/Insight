@@ -81,8 +81,10 @@
         <h1 style="font-family: 'Signika Negative', sans-serif; color: #f4511e;">Audio File Upload</h1>
         <form method="POST" enctype=multipart/form-data>
             <input class="file" type="file" name="file" style="background-color: white;"><br>
-            <input class="submit_button" type="submit" name="audio_submit" value="Submit">
+            <input class="submit_button" type="submit" name="audio_submit" value="Submit" onclick="load()">
         </form>
+        <div hidden id="loading" class="loader"></div>
+        <h2 hidden id="loading_text" style="text-align: center; font-family: 'Signika Negative'; color: black;">Loading...</h3>
         </div>
 
         <h1 style="font-family: 'Signika Negative', sans-serif; color: #f4511e; padding-top: 10px;">Notes</h1>
@@ -92,4 +94,13 @@
             {{ ckeditor.config(width=700, height=500) }}
         </form>
     </body>
+
+    <script >
+        function load() {
+            var spinner = document.getElementById("loading");
+            var load_text = document.getElementById("loading_text");
+            spinner.hidden = false;
+            load_text.hidden = false
+        }
+    </script>
 </html>
