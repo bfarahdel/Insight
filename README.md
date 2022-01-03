@@ -5,6 +5,7 @@
 **Website URL**: https://insight-app.azurewebsites.net
 <br>
 **Audio file used in the demo**: https://drive.google.com/file/d/1oNcBqUrRJ3Ia3cBvn4GOPswqXbvJcNHt/view?usp=sharing
+**Demo Video**: https://youtu.be/vJEmiHUoBxc
 
 Utilizing the **Symbl.ai API**, text can extracted from the user's audio file to the built-in text editor on the webpage. The user can also view augmented reality 3D model's directly in their browser (powered by the **Echo 3D API** and **Google Scene Viewer**.
 
