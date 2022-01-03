@@ -7,4 +7,4 @@
 Utilizing the **Symbl.ai API**, text can extracted from the user's audio file to the built-in text editor on the webpage. The user can also view augmented reality 3D model's directly in their browser (powered by the **Echo 3D API** and **Google Scene Viewer**.
 
 ##  Important :exclamation:
-It takes some time to upload audio files and it varies based on the length of the audio file. With a short file (around 5 minutes), I reccommend allowing around a minute to upload. This is due to the processing time with the Symbl API to extract text from the audio file.
+It takes some time to upload audio files and it varies based on the length of the audio file. With a short file (around 5 minutes), I recommend allowing around a minute to upload. This is due to the processing time with the Symbl API to extract text from the audio file.
