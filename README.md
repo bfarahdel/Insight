@@ -2,9 +2,9 @@
      alt="Insight Logo"
      style="margin-left: auto; margin-right: auto; display: block;" />
 
-<br>
 **mp3 audio file used in the demo (Franklin Roosevelt's First Inaugurial Address)**: https://drive.google.com/file/d/1e6LBN94uKS0QAN2vE14BgNcNaUtzs1XG/view?usp=sharing
 <br>
+</br>
 **Demo Video**: https://youtu.be/D54Mww7hRBc
 
 This application was developed with the Python Flask web framework.
